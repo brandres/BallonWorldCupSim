@@ -1,0 +1,2 @@
+# BallonWorldCupSim
+ Simulador de BallonWorldCup
