@@ -13,8 +13,9 @@ const results: Result[] = [];
 
 //Funcion que simula el torneo.
 //Se trata de una funcion recursiva que empareja 2 a 2 a los jugadores que se le pasa por parametro y los enfrenta mediante la funcion playMatch()
-//En caso de que todavia queden jugadores suficinetes, se vuelve a llamar a si misma con los jugadores que quedan. 
-//
+//Despues de enfrentar a los jugadores si todavia quedan jugadores suficientes, 
+//Se vuelve a llamar a si misma pasando como argumento el array de jugadores que han ganado la ronda.
+//Si solamente quedase 1 jugador. Solamente se devuelve este, ya que es el ganador de todas las rondas anteriores.
 const playTournament = (players: Player[], round: number): Player => {
   const winners: Player[] = [];
   for (let i = 0; i <= players.length - 2; i += 2) {
@@ -106,7 +107,7 @@ playTournament(players, 1);
 json2csv(
   results,
   (err, csv) => {
-    fs.writeFileSync('dataworldCupResults.csv', String(csv));
+    fs.writeFileSync('worldCupResults.csv', String(csv));
   },
   { delimiter: { field: ';' } }
 );

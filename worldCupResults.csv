@@ -1,0 +1,32 @@
+Round;Player 1 Name;Player 1 Country;Player 1 Score;Player 2 Name;Player 2 Country;Player 2 Score;Winner Name;Country Name
+1;Diego Arredondo;Estados Unidos;4;Matias Boho;Guinea Ecuatorial;1;Diego Arredondo;Estados Unidos
+1;Andrii Mostavchuk;Ucrania;1;Funtxi Ursua Zhang;China;4;Funtxi Ursua Zhang;China
+1;Jan Franquesa;España;4;Tsetevan Mladenov;Bulgaria;3;Jan Franquesa;España
+1;Felipe Pávez;Chile;4;Yana Rudenko;Rusia;1;Felipe Pávez;Chile
+1;Eric Guzmán González;Cuba;4;Gerelt-Od Tserennorov;Mongolia;3;Eric Guzmán González;Cuba
+1;Marco Fiorillo;Italia;4;Elián Barrado;Argentina;2;Marco Fiorillo;Italia
+1;Israel Quispe;Bolivia;2;Pol Jorquera;Francia;4;Pol Jorquera;Francia
+1;Raúl Eduardo Giménez;Paraguay;1;Nicklas Hallback;Suecia;4;Nicklas Hallback;Suecia
+1;Pape Ndour;Senegal;3;Isaac «Suko» Leal;Uruguay;4;Isaac «Suko» Leal;Uruguay
+1;Gor Khechoyan;Armenia;1;Tarik;Colombia;4;Tarik;Colombia
+1;Tamaz Tsagarevishvili;Georgia;2;Diego Mendez;Brasil;4;Diego Mendez;Brasil
+1;Raul David Carrero;Venezuela;3;Javi Damas;Países Bajos;4;Javi Damas;Países Bajos
+1;Ramón Cierco;Andorra;0;Ricardo Ferreira;Portugal;4;Ricardo Ferreira;Portugal
+1;Jan Spieb;Alemania;3;Moses;Reino Unido;4;Moses;Reino Unido
+1;Yahya El Hajouji;Marruecos;4;Francesco de la Cruz;Perú;3;Yahya El Hajouji;Marruecos
+1;Walid Seddiki;Argelia;4;Luis «Pollo» Forzan;México;0;Walid Seddiki;Argelia
+2;Diego Arredondo;Estados Unidos;4;Funtxi Ursua Zhang;China;0;Diego Arredondo;Estados Unidos
+2;Jan Franquesa;España;4;Felipe Pávez;Chile;0;Jan Franquesa;España
+2;Eric Guzmán González;Cuba;1;Marco Fiorillo;Italia;4;Marco Fiorillo;Italia
+2;Pol Jorquera;Francia;0;Nicklas Hallback;Suecia;4;Nicklas Hallback;Suecia
+2;Isaac «Suko» Leal;Uruguay;4;Tarik;Colombia;2;Isaac «Suko» Leal;Uruguay
+2;Diego Mendez;Brasil;1;Javi Damas;Países Bajos;4;Javi Damas;Países Bajos
+2;Ricardo Ferreira;Portugal;4;Moses;Reino Unido;2;Ricardo Ferreira;Portugal
+2;Yahya El Hajouji;Marruecos;2;Walid Seddiki;Argelia;4;Walid Seddiki;Argelia
+3;Diego Arredondo;Estados Unidos;2;Jan Franquesa;España;4;Jan Franquesa;España
+3;Marco Fiorillo;Italia;2;Nicklas Hallback;Suecia;4;Nicklas Hallback;Suecia
+3;Isaac «Suko» Leal;Uruguay;1;Javi Damas;Países Bajos;4;Javi Damas;Países Bajos
+3;Ricardo Ferreira;Portugal;4;Walid Seddiki;Argelia;3;Ricardo Ferreira;Portugal
+S;Jan Franquesa;España;4;Nicklas Hallback;Suecia;3;Jan Franquesa;España
+S;Javi Damas;Países Bajos;4;Ricardo Ferreira;Portugal;3;Javi Damas;Países Bajos
+F;Jan Franquesa;España;4;Javi Damas;Países Bajos;2;Jan Franquesa;España

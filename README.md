@@ -13,5 +13,5 @@ Posteriormente simplemente se puede ejecutar con el siguiente comando:
 npm start
 ```
 
-El resultado se guarda en el fichero `dataworldCupResults.csv`
+El resultado se guarda en el fichero `worldCupResults.csv`
 y ademas se muestra por pantalla una tabla con todos los datos de este fichero.
