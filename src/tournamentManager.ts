@@ -1,14 +1,14 @@
 import { MatchResult, Player, Result, ScoreBoard } from './types';
-import { getRound,getMatchResult } from './util';
+import { getRound, getMatchResult } from './util';
 
-
-export const playTournament = (players: Player []): Result[] => {
-    return playRounds (players, 1);
-}
+//wrapper que exporta la ejecucion del torneo.
+export const playTournament = (players: Player[]): Result[] => {
+    return playRounds(players, 1);
+};
 
 //Funcion que los juegos de una ronda.
 //Se trata de una funcion recursiva que empareja 2 a 2 a los jugadores que se le pasa por parametro y los enfrenta mediante la funcion playMatch()
-//Los ganadores y resultados de cada enfrentamiento se almacenan, 
+//Los ganadores y resultados de cada enfrentamiento se almacenan,
 //y si todavia queda mas de 1 ganador se vuelve a llamar si misma para enfrentar a los ganadores almacenados en la siguiente ronda.
 //Para ello se concatenan los resultados de la ronda actual con la ejecucion de si misma pasando los ganadores y el incremento de la ronda como parametros (Es decir los resultados de la siguiente ronda)
 //En caso de que solamente quede 1 ganador, significa que ya hemos llegado a la final. y solamente se devuelve el resultado de la ronda.
@@ -32,8 +32,10 @@ const playRounds = (players: Player[], round: number): Result[] => {
     }
     //Si el numero de ganadores es mayor que 1 se concatenan los resultados de la ronda actual
     //con los resultados de ejecutarse a si misma pasando los ganadores y la siguiente ronda por parametro (Es decir los resultados de las siguientes rondas)
-    //En caso contrario solamente se devuelve el resultado del partido, ya que significa que era la final y solamente queda 1 ganador. 
-    return winners.length > 1 ? results.concat(playRounds(winners, ++round)) : results;
+    //En caso contrario solamente se devuelve el resultado del partido, ya que significa que era la final y solamente queda 1 ganador.
+    return winners.length > 1
+        ? results.concat(playRounds(winners, ++round))
+        : results;
 };
 
 //Funcion que ejecuta el partido (Con las reglas determinadas) entre los dos jugadores que se pasan por parametro.

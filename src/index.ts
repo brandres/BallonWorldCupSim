@@ -8,7 +8,6 @@ import fs from 'fs';
 //Cargamos datos
 const players: Player[] = Object.values(data);
 
-
 //Ejecucion del torneo
 const results: Result[] = playTournament(players);
 //Se transforma el JSON resultante en CSV y se guarda en un archivo llamado worldCupResults.csv.
