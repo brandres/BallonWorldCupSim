@@ -20,11 +20,7 @@ const playRounds = (players: Player[], round: number): Result[] => {
     //Ejecucion 2 a 2 jugadores
     for (let i = 0; i <= players.length - 2; i += 2) {
         //Se jeuga el partido de los dos jugadores consecutivos.
-        const matchResult: MatchResult = playMatch(
-            players[i],
-            players[i + 1],
-            getRound(players.length, round)
-        );
+        const matchResult: MatchResult = playMatch(players[i], players[i + 1], getRound(players.length, round));
         //Se almacena el ganador del partido
         winners.push(matchResult.winner);
         //Se almacena el resultado del partido
@@ -33,18 +29,12 @@ const playRounds = (players: Player[], round: number): Result[] => {
     //Si el numero de ganadores es mayor que 1 se concatenan los resultados de la ronda actual
     //con los resultados de ejecutarse a si misma pasando los ganadores y la siguiente ronda por parametro (Es decir los resultados de las siguientes rondas)
     //En caso contrario solamente se devuelve el resultado del partido, ya que significa que era la final y solamente queda 1 ganador.
-    return winners.length > 1
-        ? results.concat(playRounds(winners, ++round))
-        : results;
+    return winners.length > 1 ? results.concat(playRounds(winners, ++round)) : results;
 };
 
 //Funcion que ejecuta el partido (Con las reglas determinadas) entre los dos jugadores que se pasan por parametro.
 //La funcion devuelve el jugador ganador del partido.
-const playMatch = (
-    playerA: Player,
-    playerB: Player,
-    round: string
-): MatchResult => {
+const playMatch = (playerA: Player, playerB: Player, round: string): MatchResult => {
     //Establecemos la tabla de puntuaciones con los datos de los jugadores y sus puntuaciones
     let scoreboard: ScoreBoard[] = [
         { player: playerA, score: 0 },
@@ -56,11 +46,9 @@ const playMatch = (
     //Mientras en el scoreboard no exista un jugador  con una puntuacion mayor o igual a 4 se ejecuta el partido.
     while (!scoreboard.some((sc) => sc.score >= 4)) {
         //Calculo de la distancia de golpeo multiplicando la fuerza del golpeador y un numero aleatorio entre 0 y 1.
-        let distance: number =
-            scoreboard[hitterIndex].player.strength * Math.random();
+        let distance: number = scoreboard[hitterIndex].player.strength * Math.random();
         //Calculo de la distancia de recibo multiplicando la velocidad del jugador que no es golpeador (golpeador XOR 1) y un numero aleatorio entre 0 y 1.
-        let receiveDistance: number =
-            scoreboard[hitterIndex ^ 1].player.speed * Math.random();
+        let receiveDistance: number = scoreboard[hitterIndex ^ 1].player.speed * Math.random();
         //Booleano que indica si se ha recibido el globo o no.
         //Es true en caso de que la distancia de recibo sea mayor que la de golpeo, y false en caso contrario.
         let isReceived: boolean = distance < receiveDistance;

@@ -2,12 +2,8 @@ import { MatchResult, Player, ScoreBoard } from './types';
 
 //Funcion auxiliar para transformar los datos para mostrarlos correctamente en el CSV.
 //Tambien se agrega el ganador para no realizar calculos adiciones y usarlo para avanzar las siguientes rondas.
-export const getMatchResult = (
-    scoreboard: ScoreBoard[],
-    round: string
-): MatchResult => {
-    const winner: Player =
-        scoreboard[0].score >= 4 ? scoreboard[0].player : scoreboard[1].player;
+export const getMatchResult = (scoreboard: ScoreBoard[], round: string): MatchResult => {
+    const winner: Player = scoreboard[0].score >= 4 ? scoreboard[0].player : scoreboard[1].player;
     return {
         winner,
         result: {
